@@ -1,19 +1,29 @@
 import { useState } from "react";
 import Textinputform from "./Textinputform";
+import { useNavigate } from "react-router-dom";
 
-function textinputformcantainer(){
+function Textinputformcantainer(){
 
     const [inputType, setinputType] = useState("password");
+    const [value, setValue] = useState(" ");
 
-     function handleformSumbit(event){
+    const navigate = useNavigate();
+
+    function handleformSumbit(event){
         event.preventDefault();
-        console.log("form submitted");
+        console.log("form submitted",value);
+        if(value){
+            setTimeout(()=>{
+                navigate("/play")
+            }, 5000)
+        }
 
     }
 
     function handleTextinputchange(event){
         console.log("text input changed");
         console.log(event.target.value);
+        setValue(event.target.value)
     }
 
     function handleshowhideclick(){
@@ -34,7 +44,7 @@ function textinputformcantainer(){
                     handleshowhideclick={handleshowhideclick}
             
             />)
-
+ 
 }
 
-export default textinputformcantainer;
+export default Textinputformcantainer;
