@@ -5,19 +5,23 @@ import { useNavigate } from "react-router-dom";
 function Textinputformcantainer(){
 
     const [inputType, setinputType] = useState("password");
-    const [value, setValue] = useState(" ");
+    const [value, setValue] = useState("");
 
     const navigate = useNavigate();
 
     function handleformSumbit(event){
         event.preventDefault();
+        // const trimmedValue = Value.trim()
         console.log("form submitted",value);
         if(value){
             setTimeout(()=>{
-                navigate("/play")
-            }, 5000)
-        }
 
+                navigate(`/play`, {state : {wordSelected : value}})
+            }, 1000)
+        }else{
+            alert("Please enter a value before submitting the form.")
+        }
+        
     }
 
     function handleTextinputchange(event){

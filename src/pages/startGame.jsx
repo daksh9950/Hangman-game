@@ -7,7 +7,7 @@ function StartGame(){
 
             <h1>Start Game</h1>
             <Textinputformcantainer/>
-            <Link to="/play" className="text-blue-500">Start  game link</Link>
+            <Link to="/play" className="text-blue-500">Play game link</Link>
 
         </>
     )

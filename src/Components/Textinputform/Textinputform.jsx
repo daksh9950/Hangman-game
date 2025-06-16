@@ -10,7 +10,7 @@ function Textinputform({inputType, handleformSumbit, handleTextinputchange, hand
             <div>
                 <Textinput
                     type={inputType}
-                     label={"enter a word or a phase"}
+                     label="enter a word or a phase"
                      placeholder="Enter a word or phrase here"
                      onChangeHandler={handleTextinputchange}
 
@@ -29,7 +29,7 @@ function Textinputform({inputType, handleformSumbit, handleTextinputchange, hand
                 <Button 
                     type="sumbit"
                     styleType= "primary"
-                    text= "submit"
+                    text= "Submit"
                 
                 />
             </div>

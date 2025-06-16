@@ -7,7 +7,7 @@ function Button({text,onClickhandler, styleType ="primary", type="button" }){
     <button 
          onClick = {onClickhandler}
          type={type}
-         className={`px-4 py-2 ${getButtonhandker(styleType)} color-white`}
+         className={`px-4 py-2 ${getButtonhandker(styleType)} text-white`}
          >
         {text}
     </button>
