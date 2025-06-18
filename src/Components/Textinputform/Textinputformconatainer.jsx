@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Textinputform from "./Textinputform";
 import { useNavigate } from "react-router-dom";
 
@@ -40,6 +40,22 @@ function Textinputformcantainer(){
         }
         console.log(inputType)
     }
+
+    // useEffect(()=>{
+    //     console.log("component first load");
+    // }, []) // passing an dependency array
+
+    // useEffect(()=>{
+    //     console.log("component first load and update");
+    // })
+
+    // useEffect(()=>{
+    //     console.log("component first load and update value changed");
+    // },[value])
+
+    // useEffect(()=>{
+    //     console.log("component first load and inputtype value changed ");
+    // }, [inputType])
 
     return (<Textinputform
                     inputType={inputType}

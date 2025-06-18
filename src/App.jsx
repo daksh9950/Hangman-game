@@ -7,18 +7,26 @@ import { useState } from "react"
 import StartGame from "./pages/StartGame"
 import PlayGame from "./pages/Playgame"
 import { DiVim } from "react-icons/di"
+import Home from "./pages/Home"
+import {WordContext} from './Context/WordContext.js'
 
 
 
 function App (){
+
+  const [wordList , setwordList] = useState([]);
+  const [word, setWord] = useState('');
   return(
+    <WordContext.Provider value={{wordList,setwordList,word ,setWord }} >
+
     <Routes>
           <Route path="/start" element={<StartGame/>} />
           <Route path="/play" element={<PlayGame/>} />
-          <Route path="/" element={<div>HOME</div>}/>
+          <Route path="/" element={<Home/>}/>
            
 
     </Routes>
+    </WordContext.Provider>
   )
 }
 
